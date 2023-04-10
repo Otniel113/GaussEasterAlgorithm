@@ -4,17 +4,13 @@ function cekValid(){
     if (year === ""){
         alert("Anda belum memasukkan apa-apa");
     }else{
-        if (isNaN(year)) {
-            alert("Harus memasukkan angka");
+        if (year < 0){
+            alert("Tolong masukkan tahun lebih besar daripada 0");
         }else{
-            if (year < 0){
-                alert("Tolong masukkan tahun lebih besar daripada 0");
-            }else{
-                year = parseInt(year);
-                var easter = calculateEaster(year);
-                output = "Paskah dirayakan pada tanggal: " + easter;
-                alert(output);
-            }
+            year = parseInt(year);
+            var easter = calculateEaster(year);
+            output = "Paskah dirayakan pada tanggal: " + easter;
+            alert(output);
         }
     }
 }
